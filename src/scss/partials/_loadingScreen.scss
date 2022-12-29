@@ -1,0 +1,178 @@
+%trans {
+  transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.water{
+  @extend %trans;
+    width:300px;
+    height: 2000px;
+    transform: rotate(45deg);
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #enter-screen{
+    @extend %trans;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(135deg, var(--clr-primary-200), var(--clr-secondary-200));
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+  }
+  
+  #logo-wrapper{
+    position: absolute;
+    transform: rotate(45deg);
+    height: 100%;
+    width: 200px;
+    background-color: #FFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #pBar{
+    @extend %trans;
+    height: 7px;
+    position: relative;
+    background: rgba(0,0,0,.1);
+    border-radius: 100px;
+    padding: 2px;
+    width: 400px;
+    margin: 5vh auto;
+    overflow: hidden;
+  }
+  
+  #pBar #progress{
+    @extend %trans;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    border-top: 7px solid #FFF;
+    border-radius: 100px;
+  }
+  
+  #loadS{
+    @extend %trans;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    z-index: 15;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s opacity;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, var(--clr-primary-200), var(--clr-secondary-200));
+  }
+  
+
+  .remove{
+    display: none!important;
+  }
+  
+  @media screen and (max-width: 500px){
+    /* .water, .water:after, .water:before{
+      width: 50vw;
+      height: 100vw;
+    } */
+  
+    #pBar{
+      width: 80%;
+    }
+  }
+  
+  #stripe-wrapper{
+    position: absolute;
+    transform: rotate(45deg);
+    height: 100%;
+    width: 500px;
+  }
+  
+  #stripe1{
+    position: absolute;
+    top: 0;
+    background: linear-gradient(45deg,rgba(169, 221, 255, 0) ,rgba(35, 156, 236, 0.5), rgba(202, 234, 255, 0) );
+    animation:swipe 3s ease-in;
+    width: 200px;
+    height: 1200px;
+  }
+  
+  #stripe2{
+    right: 0;
+    position: absolute;
+    background: linear-gradient(45deg,rgba(169, 221, 255, 0) ,rgba(84, 186, 255, 0.5), rgba(169, 221, 255, 0) );
+    animation:swipe 2s ease-in;
+    width: 150px;
+    height: 1000px;
+  }
+  
+  #stripe3{
+    left: 25%;
+    position: absolute;
+    background: linear-gradient(45deg,rgba(169, 221, 255, 0) ,rgba(63, 178, 255, 0.6), rgba(169, 221, 255, 0) );
+    animation:swipe 2s ease-in;
+    width: 250px;
+    height: 1300px;
+  }
+  
+  #stripe4{
+    right: 30%;
+    position: absolute;
+    background: linear-gradient(45deg,rgba(169, 221, 255, 0) ,rgba(10, 128, 207, 0.7), rgba(169, 221, 255, 0) );
+    animation:swipe 3s ease-in;
+    width: 50px;
+    height: 1000px;
+  }
+  @keyframes swipe{
+    0%{
+        transform: translateY(-1000px);
+    }
+    100%{
+        transform: translateY(3000px);
+    }
+  }
+  
+  .water img{
+    position: absolute;
+    transform: rotate(-90deg);
+    height: 150px;
+    width: auto;
+    margin: auto;
+    background-color: #FFF;
+  }
+  
+  .carousel-wrapper h3{
+    position: absolute;
+    top: 10vh;
+  }
+  
+  .show{
+    left: 0!important;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .hide-top{
+    top: -50px!important;
+  }
+  
+  .hide-bottom{
+    bottom: -50px!important;
+  }

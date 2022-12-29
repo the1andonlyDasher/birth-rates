@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(-258 -453)">
+<g transform="translate(275 453)" fill="none" stroke="#fff" stroke-width="2">
+<rect width="31" height="43" stroke="none"/>
+<rect x="1" y="1" width="29" height="41" fill="none"/>
+</g>
+<rect transform="translate(258 484)" width="32" height="17" fill="#fff"/>
+<path transform="translate(-2917.2 -1600.3)" d="m3176 2085 15.016 7.717 14.808-7.717" fill="none" stroke="#5b5b5b"/>
+<g transform="translate(295 458)" fill="none" stroke="#fff">
+<circle cx="3" cy="3" r="3" stroke="none"/>
+<circle cx="3" cy="3" r="2.5" fill="none"/>
+</g>
+<line transform="translate(280.11 467.6)" x2="20.856" fill="none" stroke="#fff"/>
+<line transform="translate(286.78 470.94)" x2="14.182" fill="none" stroke="#fff"/>
+<line transform="translate(280.11 474.27)" x2="20.856" fill="none" stroke="#fff"/>
+<line transform="translate(280.11 477.61)" x2="20.856" fill="none" stroke="#fff"/>
+</g>
+</svg>

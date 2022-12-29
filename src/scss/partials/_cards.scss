@@ -1,0 +1,236 @@
+/* base classes */
+
+%flex-full {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+%absolute-full {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+%top-left-full {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%trans {
+  transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+}
+
+%no-space{
+  padding: 0;
+  margin: 0;
+}
+
+%flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%basic-container{
+  border-radius: 2px;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 20%); 
+}
+
+/* base classes */
+
+  #scene1 h1{
+    color: var(--clr-secondary-500)
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #map button{
+    margin: 1rem auto 1rem 1rem;
+    padding: 0.5rem  0.5rem 0.5rem 0;;
+  }
+
+  
+  #map ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: auto;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+  }
+
+  .li__wrapper{
+    margin: 30% auto 1rem auto;
+    width: 100%;
+    min-height: 200px;
+    position: relative
+  }
+  
+  #map ul li {
+    @extend %trans;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    list-style-type: none;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  #map ul li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-linear-gradient(0deg, #0c3b5abe, #0c3b5a00);
+    width: 100%;
+    height: 30%;
+    z-index: -1;
+  }
+
+  .plane.a__active{
+    @extend %trans;
+    transition-delay: 0.5s;
+  }
+
+  .left{
+    margin-right: none;
+  }
+
+  .right{
+    margin-left: none;
+  }
+
+  #map ul li .h__wrapper {
+    position: absolute;
+    background-color: var(--clr-secondary-500);
+    height: auto;
+    width: 100%;
+    top: 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    left: 0;
+    z-index: -1;
+  }
+
+  #map ul li h2{
+    font-family: 'Kaushan Script', sans-serif;
+    text-transform: none;
+    color: var(--clr-contrast-100);
+    font-size: var(--fs-sub);
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  #map ul li h2::before{
+    content:"";
+    position: absolute;
+    bottom: 15px;
+    left: 1rem;
+    height: 3px;
+    border-radius: 5px;
+    width: 45%;
+    background-color: var(--clr-secondary-400);
+  }
+
+  #map ul li h2::after{
+    content:"";
+    position: absolute;
+    bottom: 9px;
+    right: 1rem;
+    height: 3px;
+    border-radius: 5px;
+    width: 60%;
+    background-color: var(--clr-secondary-300);
+  }
+
+  .annotation{
+    @extend %flex-center,%trans;
+    position: absolute;
+    top: -30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0;
+    background-color: var(--clr-contrast-100);
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .a__active .annotation{
+    border: 2px solid var(--clr-secondary-500)!important;
+    box-shadow: none!important;
+  }
+
+  .annotation img{
+    height: 60%;
+    width: auto;
+  }
+
+  .r{
+    // left: -30px;
+    left: calc(50% - 31px);
+  }
+
+  .l{
+    // right: -30px;
+    right: calc(50% - 31px);
+  }
+
+  .plane {
+    /* define the size of your plane */
+    position: relative;
+
+  }
+
+  .aspect{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .fixed{
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% - 4rem);
+  }
+
+  .p__holder {
+    /* hide the img element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    display: none;
+  }

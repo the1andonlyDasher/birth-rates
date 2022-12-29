@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: 'Catamaran';
+    font-weight: 400;
+    src: local('Catamaran'), url(../fonts/Catamaran-Regular.woff2) format('woff2'),
+         local('Catamaran'), url(../fonts/Catamaran-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Catamaran';
+    font-weight: 900;
+    src: local('Catamaran'), url(../fonts/Catamaran-Black.woff2) format('woff2'),
+         local('Catamaran'), url(../fonts/Catamaran-Black.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Courier Prime';
+    font-weight: 400;
+    src: local('Courier Prime'), url(../fonts/CourierPrime-Regular.woff2) format('woff2'),
+         local('Courier Prime'), url(../fonts/CourierPrime-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Fira Sans';
+    font-weight: 800;
+    src: local('Fira Sans'), url(../fonts/FiraSans-ExtraBold.woff2) format('woff2'),
+         local('Fira Sans'), url(../fonts/FiraSans-ExtraBold.ttf) format('truetype');
+  }

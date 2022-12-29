@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 69 43" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(-261 -233)" fill="none" stroke="#fff">
+<g transform="translate(285 233)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+<rect width="21" height="14" stroke="none"/>
+<rect x="1" y="1" width="19" height="12" fill="none"/>
+</g>
+<line transform="translate(285.37 265.35)" x2="20.766" stroke-width="2"/>
+<path transform="translate(-5088.8 -1583.1)" d="M5384.5,1848.431V1836" stroke-width="2"/>
+<line transform="translate(289.5 249.5)" x2="12" stroke-linecap="round"/>
+<path transform="translate(-5090.2 -1594)" d="m5385.8 1843.5v-3.583"/>
+<g transform="translate(309 259)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+<rect width="21" height="14" stroke="none"/>
+<rect x="1" y="1" width="19" height="12" fill="none"/>
+</g>
+<line transform="translate(313.5 275.5)" x2="12" stroke-linecap="round"/>
+<path transform="translate(-5066.2 -1568)" d="m5385.8 1843.5v-3.583"/>
+<g transform="translate(261 258)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+<rect width="21" height="14" stroke="none"/>
+<rect x="1" y="1" width="19" height="12" fill="none"/>
+</g>
+<line transform="translate(265.5 274.5)" x2="12" stroke-linecap="round"/>
+<path transform="translate(-5114.2 -1569)" d="m5385.8 1843.5v-3.583"/>
+</g>
+</svg>

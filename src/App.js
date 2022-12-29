@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
 
-function App() {
+import { useCycle, motion } from "framer-motion";
+import React, { useEffect, Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import GL from "./js/GL";
+
+const Loader = () => {
+  const [animate, cycle] = useCycle({ opacity: 1 }, { opacity: 0 });
+  useEffect(() => {
+    cycle();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <motion.div animate={animate} className="loader__wrapper">
+      <div className="loader"></div>
+    </motion.div>
+  );
+};
+
+export default function App() {
+  return (
+    <>
+      <Router>
+        <Loader />
+        <GL />
+        <AnimatedRoutes />
+      </Router>
+    </>
   );
 }
-
-export default App;
